@@ -1,6 +1,6 @@
-//This is an example of the ini module safe function.
+// This is an example of the ini module safe function.
 
-//Get ini module
+// Get ini module
 var ini_module = require('../ini');
 
 var test_String_One = '"This string tests quotes."';
