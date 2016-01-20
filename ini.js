@@ -1,4 +1,3 @@
-'use strict';
 
 // Public Module Methods
 exports.parse = exports.decode = decode
@@ -10,6 +9,7 @@ exports.unsafe = unsafe
 var eol = process.platform === 'win32' ? '\r\n' : '\n'
 
 /**
+ * 
  * @param {object} object
  * @param {string} option
  */
@@ -31,6 +31,7 @@ function encode (obj, opt) {
   // check to see if whitespace for param opt is true or false
   var separator = opt.whitespace ? ' = ' : '='
 
+  
   Object.keys(obj).forEach(function (k, _, __) {
     var val = obj[k]
     if (val && Array.isArray(val)) {
@@ -65,7 +66,7 @@ function encode (obj, opt) {
 }
 
 /**
- * 
+ * @param {string} str - A string of some value
  */
 function dotSplit (str) {
   return str.replace(/\1/g, '\u0002LITERAL\\1LITERAL\u0002')
@@ -77,8 +78,7 @@ function dotSplit (str) {
 }
 
 /**
- * 
- * 
+ * @param {string} str - 
  */
 function decode (str) {
   var out = {}
@@ -155,7 +155,8 @@ function decode (str) {
 }
 
 /**
- * 
+ * @param {string} val -
+ * @return
  */
 function isQuoted (val) {
   return (val.charAt(0) === '"' && val.slice(-1) === '"') ||
@@ -163,7 +164,7 @@ function isQuoted (val) {
 }
 
 /**
- * 
+ * @param {string} val
  */
 function safe (val) {
   return (typeof val !== 'string' ||
@@ -177,9 +178,11 @@ function safe (val) {
 }
 
 /**
+ * @oaram {string} val
+ * @param 
  * 
  */
-function unsafe (val, doUnesc) {
+function unsafe (val) {
   val = (val || '').trim()
   if (isQuoted(val)) {
     // remove the single quotes before calling JSON.parse
