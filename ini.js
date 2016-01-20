@@ -1,4 +1,3 @@
-
 // Public Module Methods
 exports.parse = exports.decode = decode
 exports.stringify = exports.encode = encode
@@ -9,9 +8,12 @@ exports.unsafe = unsafe
 var eol = process.platform === 'win32' ? '\r\n' : '\n'
 
 /**
+ * This method takes an object and encodes it into ini-style formatting
  * 
- * @param {object} object
- * @param {string} option
+ * @param {object} object - An object that is 
+ * @param {string} option - An option about how to style whitespace
+ * 
+ * @return {string} out - A string that is in ini-style formatting
  */
 function encode (obj, opt) {
   var children = []
@@ -66,19 +68,12 @@ function encode (obj, opt) {
 }
 
 /**
- * @param {string} str - A string of some value
- */
-function dotSplit (str) {
-  return str.replace(/\1/g, '\u0002LITERAL\\1LITERAL\u0002')
-    .replace(/\\\./g, '\u0001')
-    .split(/\./).map(function (part) {
-    return part.replace(/\1/g, '\\.')
-      .replace(/\2LITERAL\\1LITERAL\2/g, '\u0001')
-  })
-}
-
-/**
- * @param {string} str - 
+ * A public method which takes a given string formatted in ini-style and 
+ * creates a nested object out of it.
+ * 
+ * @param {string} str - A string that is in ini-style formatting
+ * 
+ * @return {object} A nested object which is the result of method processing
  */
 function decode (str) {
   var out = {}
@@ -155,8 +150,28 @@ function decode (str) {
 }
 
 /**
- * @param {string} val -
- * @return
+ * An internal method which will split a string on a '.' character
+ * 
+ * @param {string} str - A string of some value
+ * 
+ * @return {map} A map of the given string being split apart 
+ */
+function dotSplit (str) {
+  return str.replace(/\1/g, '\u0002LITERAL\\1LITERAL\u0002')
+    .replace(/\\\./g, '\u0001')
+    .split(/\./).map(function (part) {
+    return part.replace(/\1/g, '\\.')
+      .replace(/\2LITERAL\\1LITERAL\2/g, '\u0001')
+  })
+}
+
+/**
+ * An internal method that looks at a string and determines 
+ * whether or not it is enclosed by '' or "" characters.
+ * 
+ * @param {string} val - A given string to be checked for quotes
+ * 
+ * @return {boolean} True if the given param is surrounded by '' or "" characters, else false
  */
 function isQuoted (val) {
   return (val.charAt(0) === '"' && val.slice(-1) === '"') ||
@@ -164,7 +179,11 @@ function isQuoted (val) {
 }
 
 /**
- * @param {string} val
+ * This method takes a string and escapes any special characters within it.
+ * 
+ * @param {string} val - A given string passed in by another method
+ * 
+ * @return {string} This string's special characters will be escaped if any are present
  */
 function safe (val) {
   return (typeof val !== 'string' ||
@@ -178,9 +197,12 @@ function safe (val) {
 }
 
 /**
- * @oaram {string} val
- * @param 
+ * This method takes a string and unescapes any special characters within it.
+ * It returns that unescaped string.
  * 
+ * @param {string} val - A given string passed in by another method
+ * 
+ * @return {string} This string's special characters will be unescaped if any are present
  */
 function unsafe (val) {
   val = (val || '').trim()

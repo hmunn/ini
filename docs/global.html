@@ -101,18 +101,71 @@
 
     
 
-    <h4 class="name" id="decode"><span class="type-signature"></span>decode<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="decode"><span class="type-signature"></span>decode<span class="signature">(str)</span><span class="type-signature"> &rarr; {object}</span></h4>
 
     
 
 
 
+<div class="description">
+    A public method which takes a given string formatted in ini-style and creates a nested object out of it.
+</div>
 
 
 
 
 
 
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A string that is in ini-style formatting</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -148,7 +201,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line83">line 83</a>
+        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line78">line 78</a>
     </li></ul></dd>
     
 
@@ -171,6 +224,28 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A nested object which is the result of method processing
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -179,18 +254,71 @@
 
     
 
-    <h4 class="name" id="dotSplit"><span class="type-signature"></span>dotSplit<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="dotSplit"><span class="type-signature"></span>dotSplit<span class="signature">(str)</span><span class="type-signature"> &rarr; {map}</span></h4>
 
     
 
 
 
+<div class="description">
+    An internal method which will split a string on a '.' character
+</div>
 
 
 
 
 
 
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A string of some value</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -226,7 +354,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line70">line 70</a>
+        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line159">line 159</a>
     </li></ul></dd>
     
 
@@ -249,6 +377,28 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A map of the given string being split apart
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">map</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -257,11 +407,15 @@
 
     
 
-    <h4 class="name" id="encode"><span class="type-signature"></span>encode<span class="signature">(object, option)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="encode"><span class="type-signature"></span>encode<span class="signature">(object, option)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
+
+<div class="description">
+    This method takes an object and encodes it into ini-style formatting
+</div>
 
 
 
@@ -312,7 +466,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">An object that is</td>
         </tr>
 
     
@@ -335,7 +489,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">An option about how to style whitespace</td>
         </tr>
 
     
@@ -376,7 +530,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line16">line 16</a>
+        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -399,6 +553,28 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    out - A string that is in ini-style formatting
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -407,18 +583,71 @@
 
     
 
-    <h4 class="name" id="isQuoted"><span class="type-signature"></span>isQuoted<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="isQuoted"><span class="type-signature"></span>isQuoted<span class="signature">(val)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
 
 
 
+<div class="description">
+    An internal method that looks at a string and determines whether or not it is enclosed by '' or "" characters.
+</div>
 
 
 
 
 
 
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>val</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A given string to be checked for quotes</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -454,7 +683,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line160">line 160</a>
+        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line176">line 176</a>
     </li></ul></dd>
     
 
@@ -477,6 +706,28 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    True if the given param is surrounded by '' or "" characters, else false
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -485,18 +736,71 @@
 
     
 
-    <h4 class="name" id="safe"><span class="type-signature"></span>safe<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="safe"><span class="type-signature"></span>safe<span class="signature">(val)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
+<div class="description">
+    This method takes a string and escapes any special characters within it.
+</div>
 
 
 
 
 
 
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>val</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A given string passed in by another method</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -532,7 +836,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line168">line 168</a>
+        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line188">line 188</a>
     </li></ul></dd>
     
 
@@ -555,6 +859,28 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    This string's special characters will be escaped if any are present
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -563,18 +889,71 @@
 
     
 
-    <h4 class="name" id="unsafe"><span class="type-signature"></span>unsafe<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="unsafe"><span class="type-signature"></span>unsafe<span class="signature">(val)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
+<div class="description">
+    This method takes a string and unescapes any special characters within it.It returns that unescaped string.
+</div>
 
 
 
 
 
 
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>val</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A given string passed in by another method</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -610,7 +989,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line182">line 182</a>
+        <a href="ini.js.html">ini.js</a>, <a href="ini.js.html#line207">line 207</a>
     </li></ul></dd>
     
 
@@ -633,6 +1012,28 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    This string's special characters will be unescaped if any are present
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -658,7 +1059,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Jan 19 2016 19:40:32 GMT-0800 (Pacific Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Jan 19 2016 20:38:22 GMT-0800 (Pacific Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
