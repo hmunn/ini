@@ -181,7 +181,8 @@ function isQuoted (val) {
 }
 
 /**
- * This method takes a string and escapes any special characters within it.
+ * This method takes a string and escapes quotes and other special characters
+ * within it.
  * 
  * @param {string} val - A given string passed in by another method
  * 
@@ -199,7 +200,7 @@ function safe (val) {
 }
 
 /**
- * This method takes a string and unescapes any special characters within it.
+ * This method takes a string and unescapes any escaped special characters within it.
  * It returns that unescaped string.
  * 
  * @param {string} val - A given string passed in by another method
