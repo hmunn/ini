@@ -8,10 +8,12 @@ exports.unsafe = unsafe
 var eol = process.platform === 'win32' ? '\r\n' : '\n'
 
 /**
- * This method takes an object and encodes it into ini-style formatting
+ * This method takes an object and encodes it into ini-style formatting. Can be used as parse
  * 
- * @param {object} object - An object that is 
- * @param {string} option - An option about how to style whitespace
+ * @param {object} object - An object that is to be encoded
+ * @param {array} option - An array of options that can be used to provided more
+ * detailed formatting: A string to provide a section title, a boolean to provide
+ * extra whitespace, etc. 
  * 
  * @return {string} out - A string that is in ini-style formatting
  */
@@ -69,7 +71,7 @@ function encode (obj, opt) {
 
 /**
  * A public method which takes a given string formatted in ini-style and 
- * creates a nested object out of it.
+ * creates a nested object out of it. can be used as stringify.
  * 
  * @param {string} str - A string that is in ini-style formatting
  * 
@@ -150,7 +152,7 @@ function decode (str) {
 }
 
 /**
- * An internal method which will split a string on a '.' character
+ * An internal method which will split a string on specific characters
  * 
  * @param {string} str - A string of some value
  * 
